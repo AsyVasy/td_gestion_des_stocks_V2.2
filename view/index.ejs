@@ -1,0 +1,55 @@
+<%- include partial/head.ejs %>
+
+<div class="slider" id="slider">
+    <div class="slItems">
+        <div class="slItem" style="background-image: url('https://unsplash.it/1920/1080?image=990');">
+            <div class="slText">
+                <h2 class="titleSlide">Bienvenue sur le site de bizOnline</h2>
+                <h3 class="textSlide">Site de gestions des stocks</h3>
+            </div>
+        </div>
+        <div class="slItem" style="background-image: url('https://unsplash.it/1920/1080?image=976');">
+            <div class="slText">
+                <h2 class="titleSlide">Consultez les stocks des marques</h2>
+                <h3 class="textSlide">Afficher, Ajouter, Modifier, Supprimer</h3>
+            </div>
+        </div>
+        <div class="slItem" style="background-image: url('https://unsplash.it/1920/1080?image=950');">
+            <div class="slText">
+                <h2 class="titleSlide">Gerez &eacute;galement les stocks des produits</h2>
+                <h3 class="textSlide">Chacuns des produits sont liés aux marques</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function() {
+        $('#slider').rbtSlider({
+            height: '100vh',
+            'dots': true,
+            'arrows': true,
+            'auto': 3
+        });
+    });
+
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+<%- include partial/footer.ejs %>

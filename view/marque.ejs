@@ -1,0 +1,98 @@
+<%- include partial/head.ejs %>
+
+
+
+<!--
+<div id="marque">
+    <fieldset id="tabMarque">
+        <i class="fal fa-arrow-alt-from-right"></i>
+        <legend>
+            <h2>TABLEAU MARQUE</h2>
+        </legend>
+        <button id="btn_get_marque">Afficher</button>
+        <button id="btn_delete">Supprimer</button>
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>id</td>
+                    <td>nom</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="list_marque">
+
+            </tbody>
+        </table>
+    </fieldset>
+    <br>
+    <form action="/" method="post" id="formulaireMarque">
+        <fieldset>
+            <legend>
+                <h2>Ajouter une marque</h2>
+            </legend>
+            <div id="inputProd">
+                <input type="text" id="new_marque_name" placeholder="nom" autocomplete="off" value="citroen">
+
+                <button type="submit" id="btn_new_marque">Ajouter</button>
+            </div>
+        </fieldset>
+    </form>
+
+
+
+    <i class="fal fa-arrow-alt-from-left"></i>
+
+</div>
+-->
+
+<div id="marque">
+
+
+
+
+    <i class="fal fa-arrow-alt-from-left"></i>
+    <fieldset id="tabMarque">
+        <i class="fal fa-arrow-alt-from-right"></i>
+        <legend>
+            <h2>TABLEAU MARQUE</h2>
+        </legend>
+        <button id="btn_get_marque">Afficher</button>
+        <button id="btn_del_marque">Supprimer</button>
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>id</td>
+                    <td>nom</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="tab_marque">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>id</td>
+                    <td>nom</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </fieldset>
+
+    <br>
+    <form action="/" method="post" id="formulaireMarque">
+        <fieldset>
+            <legend>
+                <h2>Ajouter une marque</h2>
+            </legend>
+            <div id="inputProd">
+                <input type="text" id="marque_nom" placeholder="nom" autocomplete="off" value="citroen">
+                <button type="submit" id="btn_new_marque">Ajouter</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<%- include partial/footer.ejs %>

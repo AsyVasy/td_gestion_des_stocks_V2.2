@@ -1,0 +1,1 @@
+"use strict";var app=function(){console.log("hello app JS front side");window.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("burger");console.log(e);var n=document.getElementById("nav_main").querySelector("ul");console.log(n),e.addEventListener("click",function(){n.classList.toggle("activefromburger")})})}();

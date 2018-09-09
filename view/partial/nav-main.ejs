@@ -1,0 +1,12 @@
+<nav id="nav_main" >
+ <i class="fa fa-bars fa-2x" id="burger"></i>
+  <ul class="list">
+    <% for(let i = 0; i < site.nav.length; i++) {%>
+      <li class="item">
+        <a class="link" href="<%= site.nav[i].route %>">
+          <%= site.nav[i].label %>
+        </a>
+      </li>
+    <% } %>
+  </ul>
+</nav>

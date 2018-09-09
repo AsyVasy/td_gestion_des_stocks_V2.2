@@ -1,0 +1,42 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1036{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.17134}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang12 Premiere \'e9tape: Cr\'e9ation de la base de donn\'e9es\par
+\par
+mysql -u root -p\par
+CREATE DATABASE tp_gestion_des_stocks_crud;\par
+ USE tp_gestion_des_stocks_crud\par
+CREATE TABLE marque ( id SMALLINT(6) UNSIGNED AUTO_INCREMENT, nom VARCHAR(60) NOT NULL, PRIMARY KEY (id));\par
+\par
+MariaDB [tp_gestion_des_stocks_crud]> INSERT INTO marque (nom) VALUES ('ford');\par
+Query OK, 1 row affected (0.07 sec)\par
+\par
+MariaDB [tp_gestion_des_stocks_crud]> INSERT INTO marque (nom) VALUES ('fiat');\par
+Query OK, 1 row affected (0.07 sec)\par
+\par
+MariaDB [tp_gestion_des_stocks_crud]> INSERT INTO marque (nom) VALUES ('opel');\par
+Query OK, 1 row affected (0.16 sec)\par
+CREATE TABLE produit (\par
+     id SMALLINT(6) UNSIGNED AUTO_INCREMENT,\par
+    id_marque SMALLINT(6) UNSIGNED,\par
+    nom VARCHAR(30) NOT NULL,\par
+    prix DECIMAL(13,2) NOT NULL,\par
+    description TEXT(100),\par
+     PRIMARY KEY (id),\par
+    FOREIGN KEY fk_marque(id_marque)\par
+\tab REFERENCES marque(id)\par
+     ON UPDATE CASCADE\par
+     ON DELETE SET NULL\par
+     );\par
+MariaDB [tp_gestion_des_stocks_crud]> INSERT INTO produit (id_marque, nom, prix, description) VALUES (1, 'fiesta', 5000, 'couleur noire, bon etat, entretien ok');\par
+Query OK, 1 row affected (0.16 sec)\par
+\par
+MariaDB [tp_gestion_des_stocks_crud]> INSERT INTO produit (id_marque, nom, prix, description) VALUES (2, 'punto', 3500, 'prix a debatre, pneux neufs');\par
+Query OK, 1 row affected (0.16 sec)\par
+\par
+MariaDB [tp_gestion_des_stocks_crud]> INSERT INTO produit (id_marque, nom, prix, description) VALUES (3, 'corsa', 7500, '45000km, diesel');\par
+Query OK, 1 row affected (0.09 sec)\par
+\par
+MariaDB [tp_gestion_des_stocks_crud]> INSERT INTO produit (id_marque, nom, prix, description) VALUES (1, 'focus', 6000, 'couleur noire, 5 portes');\par
+Query OK, 1 row affected (0.10 sec)\par
+\par
+}

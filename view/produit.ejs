@@ -1,0 +1,58 @@
+<%- include partial/head.ejs %>
+
+<div id="produit">
+    <br>
+    <form action="/" method="post" id="formulaireProduit">
+        <fieldset>
+            <legend>
+                <h2>Ajouter un produit</h2>
+            </legend>
+            <div id="inputProd">
+                <input type="text" id="produit_nom" placeholder="nom" autocomplete="off" value="c3">
+                <input type="number" id="produit_prix" placeholder="prix" autocomplete="off" value="4500">
+                <input type="text" id="produit_description" placeholder="description" autocomplete="off" value="vitre noire, phares xénon">
+                <button type="submit" id="btn_new_produit">Ajouter</button>
+            </div>
+        </fieldset>
+    </form>
+
+
+
+    <i class="fal fa-arrow-alt-from-left"></i>
+    <fieldset id="tabProduit">
+        <i class="fal fa-arrow-alt-from-right"></i>
+        <legend>
+            <h2>TABLEAU PRODUIT</h2>
+        </legend>
+        <button id="btn_get_produit">Afficher</button>
+        <button id="btn_del_produit">Supprimer</button>
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>id</td>
+                    <td>id_marque</td>
+                    <td>nom</td>
+                    <td>prix</td>
+                    <td>description</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody id="tab_produit">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>id</td>
+                    <td>id_marque</td>
+                    <td>nom</td>
+                    <td>prix</td>
+                    <td>description</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </fieldset>
+</div>
+<%- include partial/footer.ejs %>
